@@ -1,0 +1,1 @@
+# hibernate-xml-test
