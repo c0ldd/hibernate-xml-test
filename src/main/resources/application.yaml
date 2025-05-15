@@ -1,0 +1,32 @@
+spring:
+  threads:
+    virtual:
+      enabled: true
+  jpa:
+    properties:
+      hibernate:
+        order_inserts: 'true'
+        order_updates: 'true'
+        jdbc:
+          batch_size: 50
+          fetch_size: 100
+        default_batch_fetch_size: 200
+    hibernate:
+      ddl-auto: validate
+    mapping-resources:
+      - hibernate/GeoLocationEntity.hbm.xml
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  aop:
+    auto: 'true'
+    proxy-target-class: 'false'
+  application:
+    name: demo-service
+# Framework config
+context:
+  initializer:
+    classes: com.example.aop.demo_service.AppInitializer
+

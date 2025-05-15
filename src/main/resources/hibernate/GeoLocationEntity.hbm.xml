@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class entity-name="GeoLocationEntity" name="com.core.api.GeoLocationEntity"
+           table="geo_location" mutable="false">
+        <composite-id name="id" class="com.core.api.GeoLocationId" access="field">
+            <key-property column="id" name="id"/>
+            <key-property column="timestamp" name="timestamp"/>
+        </composite-id>
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - logicalFilePath: relation
+  - changeSet:
+      id: create_relation
+      author: devuser
+      changes:
+        - createTable:
+            tableName: geo_location
+            columns:
+              - column:
+                  name: id
+                  type: varchar(36)
+              - column:
+                  name: timestamp
+                  type: timestamptz
+        - createTable:
+            tableName: internal_entity
+            columns:
+              - column:
+                  name: id
+                  type: varchar(36)
+              - column:
+                  name: timestamp
+                  type: timestamptz
